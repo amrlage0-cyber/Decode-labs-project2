@@ -1,0 +1,130 @@
+
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  .hero .description {
+    font-size: 1.1rem;
+  }
+  .cards, .types-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 1.5rem;
+  }
+  .menu-icon {
+    display: block;
+    order: 2;
+  }
+  
+  header .icons {
+    order: 3;
+    gap: 1rem;
+    padding: 0;
+  }
+  
+  header .icons .btn-primary {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 12px 2rem;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+
+  .hero {
+    padding: 6rem 1.5rem;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p:first-child {
+    font-size: 1rem;
+  }
+  
+
+  .subscription-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .subscription-form input[type="email"] {
+    width: 100%;
+  }
+  .subscription-form .btn-primary {
+    width: 100%;
+    padding: 16px;
+  }
+  
+  .form .container {
+    padding: 40px 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero .btn-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .hero .btn-group button {
+    width: 100%;
+  }
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  .form .container h2 {
+    font-size: 1.6rem;
+  }
+}
